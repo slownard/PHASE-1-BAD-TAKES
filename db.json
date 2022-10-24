@@ -2,21 +2,34 @@
     "Songs": [
       {
         "id": 1,
-        "artist": "Sebastian",
-        "last_name": "Eschweiler",
-        "email": "sebastian@codingthesmartway.com"
+        "artist": "Drake",
+        "song": "Massive",
+        "url": "sebastian@codingthesmartway.com"
       },
       {
         "id": 2,
-        "first_name": "Steve",
-        "last_name": "Palmer",
-        "email": "steve@codingthesmartway.com"
+        "artist": "Steve",
+        "song": "Palmer",
+        "url": "steve@codingthesmartway.com"
       },
       {
         "id": 3,
-        "first_name": "Ann",
-        "last_name": "Smith",
-        "email": "ann@codingthesmartway.com"
+        "artist": "Ann",
+        "song": "Smith",
+        "url": "ann@codingthesmartway.com"
+      },
+      {
+        "id": 4,
+        "artist": "Ann",
+        "song": "Smith",
+        "url": "ann@codingthesmartway.com"
+      },
+      {
+        "id": 5,
+        "artist": "Ann",
+        "song": "Smith",
+        "url": "ann@codingthesmartway.com"
       }
+      
     ]
   }
