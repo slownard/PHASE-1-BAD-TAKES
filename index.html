@@ -10,112 +10,53 @@
 
 <body>
     <header>
-        <h3>BAD TAKES AKA THE ONLY TAKES
-        </h3>
+        <h3>BAD TAKES AKA THE ONLY TAKES</h3>
         <h5>MUSIC REVIEW</h5>
     </header>
 
-    <!-- MUSIC Menu -->
+    <!-- Song Menu -->
     <div id="music-menu">
         <img src="" />
         <!-- MUSIC Images Here -->
     </div>
 
-    <!-- MUSIC Details -->
-    <div id="music-detail">
-        <img class="detail-image"
-            src="https://imageio.forbes.com/specials-images/imageserve/6024c7d916ffe41ed702040c/0x0.jpg?format=jpg&crop=716,717,x0,y80,safe&width=1200"
-            alt="Insert Name Here" />
-        <iframe id="video"> width="420" height="420"
-            src="">
-        </iframe>
+    <span></span>
 
-        <!-- welcome user -->
-        <h2 class="name" id="name"></h2>
-        <h3 class="artist"></h3>
+    <!-- App Details -->
+    <div id="music-detail">
+        <h2>About</h2>
+        <p class="about"></p>
     </div>
 
+    <span></span>
+
+    <!-- Song details -->
     <div class="blog">
 
         <ul id="song-list">
-
-            <li id="songbox">
-
-                <h4 id="song-title"></h4>
-                <h4 id="artist"></h4>
-                <h4 id="album-name"></h4>
-                <img id="album-cover" src="" />
-                <p id="review">
-                    <button class='btn-success'>Likes: <span>0</span></button>
-                    <button class='btn-danger'>Delete</button>
-                </p>
-                <button class='btn-success'>Likes: <span>0</span></button>
-
-            </li>
-
         </ul>
 
-
-        <h3 id="title"></h3>
-        <img id="album-cover" />
-        <h4 id="artist">
-            <span>artist: </span>
-        </h4>
-        <h4 id="album">
-            <span>album: </span>
-        </h4>
-        <h4>
-            <span>song: </span>
-        </h4>
-
-        <h5>What I think...</h5>
-        <p id="music-opinion">
-            Insert your thoughts
-        </p>
-
-
-
     </div>
 
+    <span></span>
 
-
-    <h3>Rating:</h3>
-    <p>
-        <span id='rating-display'>Insert rating here</span> / 10
-    </p>
-    <h3>Comment:</h3>
-    <p id='comment-display'>
-        Insert comment here
-    </p>
-
-    <!-- New Ramen Form -->
+    <!-- Add Song Form -->
     <form id="new-music">
-        <h4>Add New Music</h4>
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="new-name" />
+        <h4>Add New Song</h4>
+        <label for="name">Song Title: </label>
+        <input type="text" name="name" id="new-song" />
+
         <label for="Artist">Artist: </label>
-        <input type="text" name="restaurant" id="new-restaurant" />
-        <label for="image">Image: </label>
-        <input type="text" name="image" id="new-image" />
-        <label for="rating">Rating: </label>
-        <input type="number" name="rating" id="new-rating" />
-        <label for="new-comment">Comment: </label>
-        <textarea name="new-comment" id="new-comment"></textarea>
+        <input type="text" name="artist" id="new-artist" />
+
+        <label for="image">Album Cover URL: </label>
+        <input type="text" name="albumcover" id="new-albumcover" />
+
+        <label for="new-review">Review: </label>
+        <textarea name="new-review" id="new-review"></textarea>
+
         <input type="submit" value="Create" />
     </form>
-
-    <div id="blog">
-        <h3></h3>
-    </div>
-
-    <!-- <form id="edit-music">
-        <h4>Update the Featured Music</h4>
-        <label for="rating">Rating: </label>
-        <input type="number" name="rating" id="new-rating" />
-        <label for="new-comment">Comment: </label>
-        <textarea name="new-comment" id="new-comment"></textarea>
-        <input type="submit" value="Update" />
-    </form> -->
 
 </body>
 

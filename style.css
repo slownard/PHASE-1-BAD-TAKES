@@ -12,13 +12,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url("https://64.media.tumblr.com/319926ea08a28ad2bbe89b098ab762fb/5ca579bf355454ff-22/s400x600/90e228bb898dfdfdfd50bfc24da76c4a650c9158.png"); */
-    /* background-image: url("https://www.wallart.com/media/catalog/product/cache/871f459736130e239a3f5e6472128962/b/e/behang-met-een-lege-witte-loods_10.jpg"); */
-    background-image: url("https://repeatreplay.com/wp-content/uploads/2021/06/best-turntable-needles-720x405.jpg");
+
+    /* background-image: url("https://media.istockphoto.com/photos/empty-modern-bright-interior-with-huge-panoramic-windows-3d-rendering-picture-id954103830?k=20&m=954103830&s=612x612&w=0&h=Sy5x_vLqvW-xnIwfSxYni7H3l9Ha-Apbxb0qBlTywMk="); */
+    background-image: url("https://www.valsparpaint.co.uk/media/3324/campaign-article-vector-hero-bg.png?anchor=center&mode=crop&width=4000&height=2000&rnd=132792754790000000");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no repeat;
     /* background-color: mintcream; */
+}
+
+.about {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+
+#song {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
 }
 
 #blog {
@@ -29,10 +43,14 @@ body {
 }
 
 header {
-    padding: 0.5rem;
-    width: 100%;
-    color: white;
-    background-color: black;
+    padding: 0.75rem;
+    width: 30%;
+    color: black;
+    /* background-color: black; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+    background-image: url("https://www.flutetunes.com/blank/blank-12.png");
 }
 
 #music-menu {
