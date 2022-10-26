@@ -1,15 +1,21 @@
-const url = "http://localhost:3000/Songs"
-const imgHolder = document.querySelector("#music-menu")
+const url = "http://localhost:3000/Songs";
+const imgHolder = document.querySelector("#music-menu");
+const newSong = document.querySelector("#new-music");
+const papaR = [];
+const patchR = document.querySelector("#ez");
+const nameSearch = document.querySelector("#new-rating");
 
 function loadIn() {
-    fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            data.forEach(elem => {
-                loadImage(elem)
-            })
-        })
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((elem) => {
+        loadImage(elem);
+      });
+      getBread(data);
+    });
 }
+
 
 function loadImage(elem) {
 
