@@ -51,6 +51,10 @@ function loadIn() {
         })
 // this makes the images show up at the top of page
 function loadImage(elem) {
+
+    const about = document.querySelector(".about");
+    about.textContent = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus adipisci nemo rem asperiores doloribus amet dolor facere quidem esse. Commodi, vero qui earum officia maiores voluptates expedita minus adipisci. Mollitia.yup"
+
     const image = document.createElement('img')
     imgHolder.append(image)
     image.src = elem.img
