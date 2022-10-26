@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+header {
+    padding: 0.75rem;
+    height: 100%;
+    width: 110%;
+    color: black;
+    /* border: 5px solid lightpink; */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+    background-color: lightpink;
+    /* background-image: url("https://ak.picdn.net/shutterstock/videos/1067719169/thumb/1.jpg"); */
+}
+
+
+img {
+    /* rounds the image */
+    border-radius: 8px;
+}
+
 body {
     padding: 1rem;
     text-align: center;
@@ -12,46 +31,51 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* background-image: url("https://media.istockphoto.com/photos/empty-modern-bright-interior-with-huge-panoramic-windows-3d-rendering-picture-id954103830?k=20&m=954103830&s=612x612&w=0&h=Sy5x_vLqvW-xnIwfSxYni7H3l9Ha-Apbxb0qBlTywMk="); */
-    background-image: url("https://wallpaperaccess.com/full/1503198.jpg");
+    /* background-image: url("https://wallpaperaccess.com/full/1503198.jpg"); */
+    background-image: url("https://img.freepik.com/free-vector/black-zigzag-background-simple-pattern-design-vector_53876-151273.jpg?w=2000");
+    /* background-color: lightgreen; */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no repeat;
     /* background-color: mintcream; */
 }
 
+/* FOR ABOUT SECTION  */
+#music-detail {
+    /* position: relative; */
+    width: 1450px;
+    height: 500px;
+    overflow: auto;
+    background-image: url("https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2013/04/26/1331587842507_1/canblaster-and-asma");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+}
+
+/* for styling the paragraph */
 .about {
-    width: 320px;
-    padding: 10px;
-    border: 5px solid gray;
-    margin: 0;
+    /* align-items: center;
+    justify-content: center; */
+    text-align: center;
+    color: white;
+    font-size: 60px;
+
 }
 
 #song {
     width: 320px;
     padding: 10px;
-    border: 5px solid gray;
+    border: 5px solid lightpink;
     margin: 0;
+
 }
 
-#blog {
+/* #blog {
     padding: 0.5rem;
     width: 100%;
     color: white;
     background-color: black;
-}
-
-header {
-    padding: 0.75rem;
-    width: 30%;
-    color: black;
-    /* background-color: black; */
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no repeat;
-    background-image: url("https://www.flutetunes.com/blank/blank-12.png");
-}
+} */
 
 #music-menu {
     display: flex;
@@ -69,10 +93,6 @@ header {
 
 #music-menu img:last-child {
     margin-right: 0;
-}
-
-#music-detail {
-    position: relative;
 }
 
 .detail-image {
@@ -95,40 +115,126 @@ header {
     bottom: 20px;
 }
 
-form {
-    margin: 1rem 0;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.blog {
+    background-color: lightpink;
+    border-radius: 8px;
+    width: 30%;
+    margin: 0px 0px 10px 0px;
 }
 
-input,
-textarea {
-    font-size: 1rem;
-    border: 1px solid black;
-    background-color: white;
-    padding: 0.5rem;
-    margin: 0.25rem 0;
-    width: 100%;
+#submitReview {
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
 }
 
-input[type="submit"] {
-    color: white;
-    border: 1px solid white;
-    background-color: black;
-    cursor: pointer;
-    transition: all 0.3s;
+.form-style-3 {
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-input[type="submit"]:active {
-    background-color: gray;
+.form-style-3 label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-form h4 {
-    width: 100%;
-    padding: 0.25rem;
-    margin: 0.5rem 0;
-    color: white;
-    background-color: black;
+.form-style-3 label>span {
+    float: left;
+    width: 100px;
+    /* color: #F072A9; */
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    /* text-shadow: 1px 1px 1px #fff; */
+}
+
+.form-style-3 fieldset {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #FFD2D2;
+    padding: 20px;
+    /* background: #FFF4F4; */
+    background-color: lightpink;
+    /* box-shadow: inset 0px 0px 15px #FFE5E5;
+    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; */
+}
+
+/* .form-style-3 fieldset legend {
+    color: #FFA0C9;
+    border-top: 1px solid #FFD2D2;
+    border-left: 1px solid #FFD2D2;
+    border-right: 1px solid #FFD2D2;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow: -0px -1px 2px #F1F1F1;
+    -webkit-box-shadow: -0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+} */
+
+.form-style-3 textarea {
+    width: 250px;
+    height: 100px;
+}
+
+/* .form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select,
+.form-style-3 textarea {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #FFC2DC;
+    outline: none;
+    color: #F072A9;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+
+    width: 50%;
+} */
+
+.form-style-3 input[type=submit],
+.form-style-3 input[type=button] {
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+    font-weight: normal;
 }

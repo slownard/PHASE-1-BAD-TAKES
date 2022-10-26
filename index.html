@@ -10,13 +10,13 @@
 
 <body>
     <header>
-        <h3>BAD TAKES AKA THE ONLY TAKES</h3>
+        <h1> BAD TAKES </h1>
         <h5>MUSIC REVIEW</h5>
     </header>
 
-    <!-- App Details -->
+    <!-- About Details -->
     <div id="music-detail">
-        <h2>About</h2>
+        <h2 class="about"></h2>
         <p class="about"></p>
     </div>
 
@@ -26,7 +26,7 @@
         <!-- MUSIC Images Here -->
     </div>
 
-    <span></span>
+
 
     <!-- App Details -->
     <!-- <div id="music-detail">
@@ -34,47 +34,66 @@
         <p class="about"></p>
     </div> -->
 
-    <span></span>
 
-    <span></span>
 
     <!-- Song details -->
+
     <div class="blog">
         <h3 id="title"></h3>
         <img id="album-cover" />
         <h4 id="artist">
-            <span>artist: </span>
+            <span></span>
         </h4>
         <h4 id="album">
-            <span>album: </span>
+            <span></span>
         </h4>
         <h4>
-            <span>song: </span>
+            <span></span>
         </h4>
 
         <ul id="song-list"></ul>
 
     </div>
 
-    <span></span>
 
     <!-- Add Song Form -->
-    <form id="new-music">
-        <h4>Add New Song</h4>
-        <label for="name">Song Title: </label>
-        <input type="text" name="name" id="new-song" />
+    <div id="song-form">
 
-        <label for="Artist">Artist: </label>
-        <input type="text" name="artist" id="new-artist" />
+        <div class="form-style-3">
+            <form>
+                <fieldset>
+                    <!-- Add a song! -->
+                    <!-- <legend>Personal</legend> -->
 
-        <label for="image">Album Cover URL: </label>
-        <input type="text" name="albumcover" id="new-albumcover" />
+                    <!-- change to song title -->
+                    <label for="field1"><span>Song Title <span class="required">*</span></span><input type="text"
+                            id="new-song" class="input-field" name="field1" value="" /></label>
 
-        <label for="new-review">Review: </label>
-        <textarea name="new-review" id="new-review"></textarea>
+                    <!--  change to song artist-->
+                    <label for="field2"><span>Artist <span class="required">*</span></span><input type="artist"
+                            id="new-artist" class="input-field" name="field2" value="" /></label>
 
-        <input type="submit" value="Create" />
-    </form>
+                    <!-- Change to img url  -->
+                    <label for="field3"><span>Album Cover URL <span class="required">*</span></span><input type="text"
+                            id="new-img" class="input-field" name="field3" value="" /></label>
+
+                    <!-- Change to img url  -->
+                    <label for="field3"><span>Song URL <span class="required">*</span></span><input type="text"
+                            id="new-video" class="input-field" name="field3" value="" /></label>
+
+                </fieldset>
+                <fieldset>
+                    <!-- <legend>Bad Take</legend> -->
+                    <label for="field6"><span>Bad Take <span class="required">*</span></span><textarea name="field6"
+                            class="textarea-field"></textarea></label>
+                    <label><span> </span><input type="submit" value=" SUBMIT " id="new-review" /></label>
+                </fieldset>
+            </form>
+        </div>
+
+
+
+    </div>
 
 </body>
 
