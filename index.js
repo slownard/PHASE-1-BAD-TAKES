@@ -13,7 +13,7 @@ const songCover = document.createElement("img")
 const songArtist = document.createElement("h4")
 const songUrl = document.createElement("p")
 const reviewList = document.createElement("ul")
-const songBox = document.createElement("li")
+const songBox = document.createElement("h1")
 songBox.id = "song"
 
 const about = document.querySelector(".about");

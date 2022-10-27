@@ -245,4 +245,10 @@ flex-direction: row-reverse;
 
 .bad-list {
     width: 100%;
+     font-size: 40px;
+     padding: 10px;
+  margin: 10px;
+  border: 10px solid black;
+  color: rgb(0, 0, 0);
+  display: inline-block;
 }
