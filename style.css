@@ -116,20 +116,20 @@ body {
 }
 
 .blog {
-    background-color: lightpink;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    width: 30%;
+    width: 70%;
     margin: 0px 0px 10px 0px;
 }
 
 #submitReview {
-    background: #EB3B88;
-    border: 1px solid #C94A81;
+    background: #000000;
+    border: 1px solid #000000;
     padding: 5px 15px 5px 15px;
-    color: #FFCBE2;
-    box-shadow: inset -1px -1px 3px #FF62A7;
-    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
-    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    color: #000000;
+    box-shadow: inset -1px -1px 3px #000000;
+    -moz-box-shadow: inset -1px -1px 3px #000000;
+    -webkit-box-shadow: inset -1px -1px 3px #000000;
     border-radius: 3px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -162,10 +162,10 @@ body {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     margin: 0px 0px 10px 0px;
-    border: 1px solid #FFD2D2;
+    border: 1px solid #000000;
     padding: 20px;
     /* background: #FFF4F4; */
-    background-color: lightpink;
+    background-color: rgb(255, 0, 0);
     /* box-shadow: inset 0px 0px 15px #FFE5E5;
     -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
     -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; */
@@ -220,10 +220,10 @@ body {
 
 .form-style-3 input[type=submit],
 .form-style-3 input[type=button] {
-    background: #EB3B88;
-    border: 1px solid #C94A81;
+    background: #000000;
+    border: 1px solid #000000;
     padding: 5px 15px 5px 15px;
-    color: #FFCBE2;
+    color: #ffffff;
     box-shadow: inset -1px -1px 3px #FF62A7;
     -moz-box-shadow: inset -1px -1px 3px #FF62A7;
     -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
@@ -237,4 +237,12 @@ body {
 .required {
     color: red;
     font-weight: normal;
+}
+#song-list {
+display: flex;
+flex-direction: row-reverse;
+}
+
+.bad-list {
+    width: 100%;
 }

@@ -2,8 +2,8 @@
 const url = "http://localhost:3000/Songs";
 const imgHolder = document.querySelector("#music-menu");
 const newSong = document.querySelector("#new-music");
-const papaR = [];
-const patchR = document.querySelector("#ez");
+const sound = document.querySelector("#ez");
+const badList = document.querySelector('.bad-list')
 
 
 //const nameSearch = document.querySelector("#new-rating");
@@ -43,10 +43,6 @@ function loadIn() {
         });
 }
 
-
-
-
-
 // DISPLAYS ALBUM IMAGES
 function loadImage(elem) {
 
@@ -60,14 +56,9 @@ function loadImage(elem) {
     })
 }
 
-
-
-
-
-
-
 //  DISPLAYS CLICKED SONG INFORMATION 
 function createInfo(elem) {
+    badList.textContent=""
     currentElem = elem
     const songList = document.querySelector("#song-list")
     formH5.textContent = "Add a Song Review!"
@@ -80,14 +71,14 @@ function createInfo(elem) {
 
     // creates the review inside the json
     const allReviews = elem.badtakes.forEach(value => {
-        const rr = document.createElement('li')
+        const rr = document.createElement('div')
         rr.textContent = value
-        formH5.append(rr)
+        badList.append(rr)
     })
     songTitle.textContent = elem.song
     songCover.src = elem.img
     songArtist.textContent = elem.artist
-    songUrl.textContent = elem.url
+    sound.src = elem.url
 
 
 
