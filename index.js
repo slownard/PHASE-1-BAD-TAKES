@@ -4,7 +4,10 @@ const imgHolder = document.querySelector("#music-menu");
 const newSong = document.querySelector("#new-music");
 const papaR = [];
 const patchR = document.querySelector("#ez");
-const nameSearch = document.querySelector("#new-rating");
+
+
+//const nameSearch = document.querySelector("#new-rating");
+
 const songTitle = document.createElement("h3")
 const songCover = document.createElement("img")
 const songArtist = document.createElement("h4")
@@ -12,8 +15,11 @@ const songUrl = document.createElement("p")
 const reviewList = document.createElement("ul")
 const songBox = document.createElement("li")
 songBox.id = "song"
+
 const about = document.querySelector(".about");
 about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES.ALL ARTISTS.ONE COMMUNITY"
+
+
 const reviewForm = document.createElement("form")
 const formLabel = document.createElement("label")
 const formInput = document.createElement("input")
@@ -22,6 +28,9 @@ const submitReview = document.createElement("button")
 reviewForm.append(formLabel, formInput, formH5, submitReview)
 console.log(reviewForm)
 let currentElem
+
+
+
 // this fetches info
 function loadIn() {
     fetch(url)
@@ -33,28 +42,13 @@ function loadIn() {
 
         });
 }
-reviewForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    console.log(currentElem)
-    const oldtake = currentElem.badtakes
-    const newtake = [...oldtake, formInput.value]
-    fetch(`http://localhost:3000/Songs/${currentElem.id}`, {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ badtakes: newtake })
 
-    })
 
-})
-// this makes the images show up at the top of page
+
+
+// DISPLAYS ALBUM IMAGES
 function loadImage(elem) {
-
-    const about = document.querySelector(".about");
-    about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES.ALL ARTISTS.ONE COMMUNITY"
-
 
 
     const image = document.createElement('img')
@@ -65,7 +59,14 @@ function loadImage(elem) {
 
     })
 }
-//this adds the info to the empty elements created above
+
+
+
+
+
+
+
+//  DISPLAYS CLICKED SONG INFORMATION 
 function createInfo(elem) {
     currentElem = elem
     const songList = document.querySelector("#song-list")
@@ -94,7 +95,10 @@ function createInfo(elem) {
     songBox.append(songTitle, songCover, songArtist, songUrl, reviewList, reviewForm)
     reviewForm.append(formH5, formLabel, formInput, submitReview)
 }
-// makes new songs to server
+
+
+
+// POST: ADDS NEW SONG 
 newSong.addEventListener("submit", (e) => {
     e.preventDefault();
     const newObj = {
@@ -113,9 +117,23 @@ newSong.addEventListener("submit", (e) => {
     });
 })
 
+// PATCH:     ADDS NEW REVIEWS TO EACH SONG 
+reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
+    console.log(currentElem)
+    const oldtake = currentElem.badtakes
+    const newtake = [...oldtake, formInput.value]
+    fetch(`http://localhost:3000/Songs/${currentElem.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ badtakes: newtake })
 
+    })
 
+})
 
 
 loadIn()
