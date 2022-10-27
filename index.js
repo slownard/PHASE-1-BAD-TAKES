@@ -1,5 +1,8 @@
 // this Created the place the info will show
 const url = "http://localhost:3000/Songs";
+var cssFile = document.createElement("link");
+cssFile.rel = "stylesheet";
+cssFile.href = ".//styles.css";
 const imgHolder = document.querySelector("#music-menu");
 const newSong = document.querySelector("#new-music");
 const sound = document.querySelector("#ez");
@@ -9,8 +12,10 @@ const badList = document.querySelector('.bad-list')
 //const nameSearch = document.querySelector("#new-rating");
 
 const songTitle = document.createElement("h3")
+songTitle.className = "one"
 const songCover = document.createElement("img")
 const songArtist = document.createElement("h4")
+songArtist.className = "one"
 const songUrl = document.createElement("p")
 const reviewList = document.createElement("ul")
 const songBox = document.createElement("h1")
@@ -25,6 +30,7 @@ const formLabel = document.createElement("label")
 const formInput = document.createElement("input")
 const formH5 = document.createElement("h5")
 const submitReview = document.createElement("button")
+submitReview.className = 'submit-btn'
 reviewForm.append(formLabel, formInput, formH5, submitReview)
 console.log(reviewForm)
 let currentElem
@@ -63,7 +69,7 @@ function createInfo(elem) {
     const songList = document.querySelector("#song-list")
     formH5.textContent = "Add a Song Review!"
     reviewForm.id = "review-form"
-    formLabel.textContent = "Review: "
+    formLabel.textContent = ""
     formInput.id = "add-review"
     formInput.type = "input"
     submitReview.textContent = " SUBMIT "
@@ -73,6 +79,7 @@ function createInfo(elem) {
     const allReviews = elem.badtakes.forEach(value => {
         const rr = document.createElement('div')
         rr.textContent = value
+        rr.className = "review-border"
         badList.append(rr)
     })
     songTitle.textContent = elem.song
@@ -123,7 +130,8 @@ reviewForm.addEventListener('submit', (e) => {
         body: JSON.stringify({ badtakes: newtake })
 
     })
-
+    .then(res=>res.json())
+    .then(dita => createInfo(dita))
 })
 
 
