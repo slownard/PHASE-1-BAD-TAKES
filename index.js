@@ -112,7 +112,9 @@ newSong.addEventListener("submit", (e) => {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(newObj),
-    });
+    })
+    .then(re=>re.json())
+    then(dota => loadImage(dota))
 })
 
 // PATCH:     ADDS NEW REVIEWS TO EACH SONG 
