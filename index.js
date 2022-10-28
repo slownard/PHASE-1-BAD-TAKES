@@ -1,13 +1,17 @@
 // this Created the place the info will show
 const url = "http://localhost:3000/Songs";
+
+//  ADDS TEXT TO ABOUT SECTION
+const about = document.querySelector(".about");
+about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES. ALL ARTISTS. ONE COMMUNITY"
+
+//  WHERE ALL SONG IMAGES ARE DISPLAYED 
 const imgHolder = document.querySelector("#music-menu");
-const newSong = document.querySelector("#new-music");
+
 const papaR = [];
 const patchR = document.querySelector("#ez");
 
-
-//const nameSearch = document.querySelector("#new-rating");
-
+//  APPENDED INFORMATION OF EACH SONG 
 const songTitle = document.createElement("h3")
 const songCover = document.createElement("img")
 const songArtist = document.createElement("h4")
@@ -15,21 +19,22 @@ const songUrl = document.createElement("p")
 const reviewList = document.createElement("ul")
 const songBox = document.createElement("li")
 songBox.id = "song"
+const div = document.createElement("div")
+div.id = "review-container"
 
-const about = document.querySelector(".about");
-about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES.ALL ARTISTS.ONE COMMUNITY"
 
-
+//  ELEMENTS FOR ADDING REVIEWS FORM
+const newSong = document.querySelector("#new-music");
 const reviewForm = document.createElement("form")
 const formLabel = document.createElement("label")
 const formInput = document.createElement("input")
 const formH5 = document.createElement("h5")
 const submitReview = document.createElement("button")
+submitReview.id = "submit-review"
+
 reviewForm.append(formLabel, formInput, formH5, submitReview)
 console.log(reviewForm)
 let currentElem
-
-
 
 // this fetches info
 function loadIn() {
@@ -42,10 +47,6 @@ function loadIn() {
 
         });
 }
-
-
-
-
 
 // DISPLAYS ALBUM IMAGES
 function loadImage(elem) {
@@ -60,12 +61,6 @@ function loadImage(elem) {
     })
 }
 
-
-
-
-
-
-
 //  DISPLAYS CLICKED SONG INFORMATION 
 function createInfo(elem) {
     currentElem = elem
@@ -77,8 +72,7 @@ function createInfo(elem) {
     formInput.type = "input"
     submitReview.textContent = " SUBMIT "
 
-
-    // creates the review inside the json
+    //  CREATES THE REVIEW INSIDE THE JSON
     const allReviews = elem.badtakes.forEach(value => {
         const rr = document.createElement('li')
         rr.textContent = value
@@ -89,14 +83,11 @@ function createInfo(elem) {
     songArtist.textContent = elem.artist
     songUrl.textContent = elem.url
 
-
-
     songList.append(songBox)
-    songBox.append(songTitle, songCover, songArtist, songUrl, reviewList, reviewForm)
+    songBox.append(songTitle, songCover, songArtist, songUrl, div, reviewForm)
+    div.append(reviewList)
     reviewForm.append(formH5, formLabel, formInput, submitReview)
 }
-
-
 
 // POST: ADDS NEW SONG 
 newSong.addEventListener("submit", (e) => {

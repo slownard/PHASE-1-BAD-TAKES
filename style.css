@@ -9,17 +9,16 @@ header {
     height: 100%;
     width: 110%;
     color: black;
-    /* border: 5px solid lightpink; */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no repeat;
-    background-color: lightpink;
-    /* background-image: url("https://ak.picdn.net/shutterstock/videos/1067719169/thumb/1.jpg"); */
+    /* background-color: orange; */
+    background-image: url("https://wallpaperaccess.com/full/2570314.jpg");
+    margin: 0px 0px 10px 0px;
 }
 
-
+/* ROUNDS ALL IMAGES */
 img {
-    /* rounds the image */
     border-radius: 8px;
 }
 
@@ -31,18 +30,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url("https://wallpaperaccess.com/full/1503198.jpg"); */
     background-image: url("https://img.freepik.com/free-vector/black-zigzag-background-simple-pattern-design-vector_53876-151273.jpg?w=2000");
-    /* background-color: lightgreen; */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no repeat;
-    /* background-color: mintcream; */
 }
 
 /* FOR ABOUT SECTION  */
 #music-detail {
-    /* position: relative; */
     width: 1450px;
     height: 500px;
     overflow: auto;
@@ -54,12 +49,9 @@ body {
 
 /* for styling the paragraph */
 .about {
-    /* align-items: center;
-    justify-content: center; */
     text-align: center;
     color: white;
     font-size: 60px;
-
 }
 
 #song {
@@ -67,15 +59,7 @@ body {
     padding: 10px;
     border: 5px solid lightpink;
     margin: 0;
-
 }
-
-/* #blog {
-    padding: 0.5rem;
-    width: 100%;
-    color: white;
-    background-color: black;
-} */
 
 #music-menu {
     display: flex;
@@ -116,6 +100,7 @@ body {
 }
 
 .blog {
+
     background-color: lightpink;
     border-radius: 8px;
     width: 30%;
@@ -123,6 +108,7 @@ body {
 }
 
 #submitReview {
+    /* background-image: url("https://wallpaperaccess.com/full/2570314.jpg"); */
     background: #EB3B88;
     border: 1px solid #C94A81;
     padding: 5px 15px 5px 15px;
@@ -137,6 +123,8 @@ body {
     font-weight: bold;
 }
 
+
+/* STYLING THE ADD MUSIC FORM */
 .form-style-3 {
     max-width: 450px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -166,57 +154,13 @@ body {
     padding: 20px;
     /* background: #FFF4F4; */
     background-color: lightpink;
-    /* box-shadow: inset 0px 0px 15px #FFE5E5;
-    -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
-    -webkit-box-shadow: inset 0px 0px 15px #FFE5E5; */
-}
 
-/* .form-style-3 fieldset legend {
-    color: #FFA0C9;
-    border-top: 1px solid #FFD2D2;
-    border-left: 1px solid #FFD2D2;
-    border-right: 1px solid #FFD2D2;
-    border-radius: 5px 5px 0px 0px;
-    -webkit-border-radius: 5px 5px 0px 0px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    background: #FFF4F4;
-    padding: 0px 8px 3px 8px;
-    box-shadow: -0px -1px 2px #F1F1F1;
-    -moz-box-shadow: -0px -1px 2px #F1F1F1;
-    -webkit-box-shadow: -0px -1px 2px #F1F1F1;
-    font-weight: normal;
-    font-size: 12px;
-} */
+}
 
 .form-style-3 textarea {
     width: 250px;
     height: 100px;
 }
-
-/* .form-style-3 input[type=text],
-.form-style-3 input[type=date],
-.form-style-3 input[type=datetime],
-.form-style-3 input[type=number],
-.form-style-3 input[type=search],
-.form-style-3 input[type=time],
-.form-style-3 input[type=url],
-.form-style-3 input[type=email],
-.form-style-3 select,
-.form-style-3 textarea {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border: 1px solid #FFC2DC;
-    outline: none;
-    color: #F072A9;
-    padding: 5px 8px 5px 8px;
-    box-shadow: inset 1px 1px 4px #FFD5E7;
-    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
-    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
-    background: #FFEFF6;
-
-    width: 50%;
-} */
 
 .form-style-3 input[type=submit],
 .form-style-3 input[type=button] {
@@ -237,4 +181,57 @@ body {
 .required {
     color: red;
     font-weight: normal;
+}
+
+/* .footer {
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: lightpink; 
+background-image: url("https://wallpaperaccess.com/full/2570314.jpg");
+color: black;
+text-align: center;
+}
+
+*/
+
+#submit-review {
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    /* padding: 5px 15px 5px 15px; */
+    color: #FFCBE2;
+
+}
+
+
+
+
+.footer-text-left {
+    font-size: 25px;
+    padding-left: 40px;
+    float: left;
+    word-spacing: 20px;
+}
+
+a.menu:hover {
+    background-color: orange;
+    font-size: 20px;
+}
+
+.footer-content-right {
+    padding-right: 40px;
+    margin-top: 20px;
+    float: right;
+}
+
+.icon-style {
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.icon-style:hover {
+    background-color: yellow;
+    padding: 5px;
 }
