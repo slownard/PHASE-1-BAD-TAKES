@@ -100,7 +100,6 @@ body {
 }
 
 .blog {
-
     background-color: lightpink;
     border-radius: 8px;
     width: 30%;
@@ -183,55 +182,19 @@ body {
     font-weight: normal;
 }
 
-/* .footer {
-
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    /* background-color: lightpink; 
-background-image: url("https://wallpaperaccess.com/full/2570314.jpg");
-color: black;
-text-align: center;
-}
-
-*/
-
 #submit-review {
     background: #EB3B88;
     border: 1px solid #C94A81;
-    /* padding: 5px 15px 5px 15px; */
     color: #FFCBE2;
-
 }
 
 
 
 
-.footer-text-left {
-    font-size: 25px;
-    padding-left: 40px;
-    float: left;
-    word-spacing: 20px;
-}
-
-a.menu:hover {
+#foot {
     background-color: orange;
-    font-size: 20px;
-}
-
-.footer-content-right {
-    padding-right: 40px;
-    margin-top: 20px;
-    float: right;
-}
-
-.icon-style {
-    height: 40px;
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
-.icon-style:hover {
-    background-color: yellow;
-    padding: 5px;
+    padding: 0.75rem;
+    height: 100%;
+    width: 110%;
+    margin: 0px 0px 10px 0px;
 }
