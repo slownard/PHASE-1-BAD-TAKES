@@ -1,16 +1,23 @@
 // this Created the place the info will show
 const url = "http://localhost:3000/Songs";
+
+// LINKING CSS
 var cssFile = document.createElement("link");
 cssFile.rel = "stylesheet";
 cssFile.href = ".//styles.css";
+
+//  ADDS TEXT TO ABOUT SECTION
+const about = document.querySelector(".about");
+about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES.ALL ARTISTS.ONE COMMUNITY"
+
+//  WHERE ALL SONG IMAGES ARE DISPLAYED
 const imgHolder = document.querySelector("#music-menu");
+
 const newSong = document.querySelector("#new-music");
 const sound = document.querySelector("#ez");
 const badList = document.querySelector('.bad-list')
 
-
-//const nameSearch = document.querySelector("#new-rating");
-
+//  APPENDED INFORMATION OF EACH SONG
 const songTitle = document.createElement("h3")
 songTitle.className = "one"
 const songCover = document.createElement("img")
@@ -21,10 +28,7 @@ const reviewList = document.createElement("ul")
 const songBox = document.createElement("h1")
 songBox.id = "song"
 
-const about = document.querySelector(".about");
-about.textContent = "WE ARE HERE TO PROVIDE A UNIQUE EXPERIENCE TO MUSIC EXPERTS AND TO THE AVERAGE MELOMANIAC. JOIN OUR COMMUNITY IN REDEFINING HOW WE VIEW MUSIC. IN THIS SPACE WE ARE ABLE TO INTRODUCE EACH OTHER TO NEW LENSES. ALL GENRES.ALL ARTISTS.ONE COMMUNITY"
-
-
+//  ELEMENTS FOR ADDING REVIEWS FORM
 const reviewForm = document.createElement("form")
 const formLabel = document.createElement("label")
 const formInput = document.createElement("input")
@@ -34,8 +38,6 @@ submitReview.className = 'submit-btn'
 reviewForm.append(formLabel, formInput, formH5, submitReview)
 console.log(reviewForm)
 let currentElem
-
-
 
 // this fetches info
 function loadIn() {
@@ -64,7 +66,7 @@ function loadImage(elem) {
 
 //  DISPLAYS CLICKED SONG INFORMATION 
 function createInfo(elem) {
-    badList.textContent=""
+    badList.textContent = ""
     currentElem = elem
     const songList = document.querySelector("#song-list")
     formH5.textContent = "Add a Song Review!"
@@ -113,7 +115,7 @@ newSong.addEventListener("submit", (e) => {
         },
         body: JSON.stringify(newObj),
     })
-    .then(re=>re.json())
+        .then(re => re.json())
     then(dota => loadImage(dota))
 })
 
@@ -132,8 +134,8 @@ reviewForm.addEventListener('submit', (e) => {
         body: JSON.stringify({ badtakes: newtake })
 
     })
-    .then(res=>res.json())
-    .then(dita => createInfo(dita))
+        .then(res => res.json())
+        .then(dita => createInfo(dita))
 })
 
 
